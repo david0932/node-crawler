@@ -10,7 +10,7 @@ request({
     var $ = cheerio.load(b);
     var result = [];
     var titles = $("li.item h2");
-    for(var i=0;i<titles.length;i++) {n
+    for(var i=0;i<titles.length;i++) {
       result.push($(titles[i]).text());
     }
     fs.writeFileSync("result.json", JSON.stringify(result));
